@@ -29,7 +29,7 @@ define('DB_USER', 'lyadmllrefunkv');
 define('DB_PASSWORD', '76763d8a17fcb9126b325ffdb263c7e5296d7385e7d359c7bf817a5ff7415444');
 
 /** Hostname của database */
-define('DB_HOST', 'ec2-54-243-228-140.compute-1.amazonaws.com');
+define('DB_HOST', 'ec2-54-243-228-140.compute-1.amazonaws.com:5432');
 
 /** Database charset sử dụng để tạo bảng database. */
 define('DB_CHARSET', 'utf8');

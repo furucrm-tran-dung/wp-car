@@ -18,23 +18,23 @@
  * @package WordPress
  */
 
-// ** Thiết lập MySQL - Bạn có thể lấy các thông tin này từ host/server ** //
-/** Tên database MySQL */
-define('DB_NAME', 'd27q6k6t6t8di2');
-
-/** Username của database */
-define('DB_USER', 'lyadmllrefunkv');
-
-/** Mật khẩu của database */
-define('DB_PASSWORD', '76763d8a17fcb9126b325ffdb263c7e5296d7385e7d359c7bf817a5ff7415444');
-
-/** Hostname của database */
-define('DB_HOST', 'ec2-54-243-228-140.compute-1.amazonaws.com:5432');
-
-/** Database charset sử dụng để tạo bảng database. */
+// S3 Config Info - read the S3 Access Keys from the config //
+define( 'AWS_ACCESS_KEY_ID', $_ENV["AWS_ACCESS_KEY_ID"]);
+define( 'AWS_SECRET_ACCESS_KEY', $_ENV["AWS_SECRET_ACCESS_KEY"]);  
+// ** Heroku Postgres settings - from Heroku Environment ** //
+$db = parse_url($_ENV["DATABASE_URL"]);
+// ** MySQL settings - You can get this info from your web host ** //
+/** The name of the database for WordPress */
+define('DB_NAME', trim($db["path"],"/"));
+/** MySQL database username */
+define('DB_USER', $db["user"]);
+/** MySQL database password */
+define('DB_PASSWORD', $db["pass"]);
+/** MySQL hostname */
+define('DB_HOST', $db["host"]);
+/** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
-
-/** Kiểu database collate. Đừng thay đổi nếu không hiểu rõ. */
+/** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
 
 /**#@+

@@ -25,13 +25,13 @@ define( 'AWS_SECRET_ACCESS_KEY', $_ENV["AWS_SECRET_ACCESS_KEY"]);
 $db = parse_url($_ENV["DATABASE_URL"]);
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', trim($db["path"],"/"));
+define('DB_NAME', 'id8703781_wpcar');
 /** MySQL database username */
-define('DB_USER', $db["user"]);
+define('DB_USER', 'id8703781_caruser');
 /** MySQL database password */
-define('DB_PASSWORD', $db["pass"]);
+define('DB_PASSWORD', '123456781');
 /** MySQL hostname */
-define('DB_HOST', $db["host"]);
+define('DB_HOST', '145.14.144.10');
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
 /** The Database Collate type. Don't change this if in doubt. */
